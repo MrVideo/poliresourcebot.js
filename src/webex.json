@@ -1,0 +1,109 @@
+[
+  {
+    "prof": "Benedetta Noris",
+    "subject": "Analisi II",
+    "link": "benedetta.noris"
+  },
+
+  {
+    "prof": "Cristina Silvano",
+    "subject": "ACSO",
+    "link": "cristina.silvano"
+  },
+
+  {
+    "prof": "Valentina Dichiarante",
+    "subject": "Chimica Generale",
+    "link": "valentina.dichiarante"
+  },
+
+  {
+    "prof": "Stefania Adami",
+    "subject": "Logica e Algebra",
+    "link": "stefania.adami"
+  },
+
+  {
+    "prof": "Achille Frigeri",
+    "subject": "Logica e Algebra, Analisi I",
+    "link": "achille.frigeri"
+  },
+
+  {
+    "prof": "Davide Gadioli",
+    "subject": "ACSO",
+    "link": "davide.gadioli"
+  },
+
+  {
+    "prof": "Ugo Buslacchi",
+    "subject": "Analisi II",
+    "link": "ugo.buslacchi"
+  },
+
+  {
+    "prof": "Carlo Angaroni",
+    "subject": "Analisi II",
+    "link": "carlo.angaroni"
+  },
+
+  {
+    "prof": "Andrea Cappelletti",
+    "subject": "Logica e Algebra",
+    "link": "andrea.cappelletti"
+  },
+
+  {
+    "prof": "Alessandro Marchetti",
+    "subject": "Chimica Generale",
+    "link": "alessandro.marchetti"
+  },
+
+  {
+    "prof": "Fabrizio Indirli",
+    "subject": "ACSO",
+    "link": "fabrizio.indirli"
+  },
+
+  {
+    "prof": "Paolo Dulio",
+    "subject": "Geometria e Algebra Lineare",
+    "link": "paolo.dulio"
+  },
+
+  {
+    "prof": "Francesco Musumeci",
+    "subject": "Fondamenti di Comunicazione e Internet",
+    "link": "francesco.musumeci"
+  },
+
+  {
+    "prof": "Federico Bizzarri",
+    "subject": "Elettrotecnica",
+    "link": "federico.bizzarri"
+  },
+
+  {
+    "prof": "Daniele Loiacono",
+    "subject": "Fondamenti di Informatica",
+    "link": "daniele.loiacono"
+  },
+
+  {
+    "prof": "Matteo Pradella",
+    "subject": "Algoritmi e Principi dell'Informatica",
+    "link": "matteo.pradella"
+  },
+
+  {
+    "prof": "Luca Barletta",
+    "subject": "Informazione e Stima",
+    "link": "luca.barletta"
+  },
+
+  {
+    "prof": "Alberto Leva",
+    "subject": "Fondamenti di Automatica",
+    "link": "alberto.leva"
+  }
+]

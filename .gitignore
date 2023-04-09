@@ -1,0 +1,11 @@
+# File system
+.DS_Store
+
+# Node packages
+node_modules
+
+# Secrets
+config.json
+
+# WebStorm config files
+.idea

@@ -15,7 +15,7 @@ module.exports = {
             fields: [
                 {
                     name: 'Repository di GitHub',
-                    value: 'In arrivo'
+                    value: '[Clicca qui](https://github.com/MrVideo/poliresourcebot.js)'
                 },
                 {
                     name: 'Documentazione Bot',

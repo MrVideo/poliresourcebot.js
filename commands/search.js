@@ -44,8 +44,8 @@ module.exports = {
                 .setTitle('Risultati di ricerca')
                 .setDescription('Ecco cosa ho trovato!');
 
-        // Save search query
-        const query = interaction.options.getString('query');
+            // Save search query and format it
+            const query = "%" + interaction.options.getString('query') + "%";
 
         // Initialize found item counter
         let foundItems = 0;

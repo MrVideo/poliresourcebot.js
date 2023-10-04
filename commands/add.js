@@ -1,6 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
-const fs = require('fs');
-
+const { SlashCommandBuilder } = require('discord.js');
 // Initialise MySQL driver
 const mysql = require("mysql");
 

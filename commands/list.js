@@ -61,7 +61,7 @@ module.exports = {
                 }
             }
             // Respond to user
-            await interaction.reply({ embeds: [listEmbed] });
+            await interaction.editReply({ embeds: [listEmbed] });
         }
     },
 };

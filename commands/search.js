@@ -82,13 +82,16 @@ module.exports = {
                     }
                 }
             }
-        });
 
-        // Return search result
-        if(foundItems === 0)
-            await interaction.editReply('Mi dispiace, ma non ho trovato nulla che corrisponda ai tuoi criteri di ricerca.');
-        else {
-            await interaction.editReply({ embeds: [queryResponseEmbed] });
+            // Return search result
+            if(!done)
+                await interaction.editReply({ embeds: [queryResponseEmbed] });
+        } catch (err) {
+            console.error('Error:', err);
+            await interaction.followUp('Si è verificato un errore durante la ricerca.');
+        } finally {
+            // Close the database connection
+            con.end();
         }
     },
 };

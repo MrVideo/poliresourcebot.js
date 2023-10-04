@@ -17,11 +17,27 @@ module.exports = {
         // Defer reply
         await interaction.deferReply();
 
-        // Load resources
-        // readFileSync needs a path relative to the current working directory. Since this command is executed by
-        // index.js, the current working directory is not commands and the path to the JSON file is ./src/resources.json
-        // instead of ../src/resources.json
-        const resources = JSON.parse(fs.readFileSync('./src/resources.json', 'utf8'));
+        // Initialise DB connection
+        const con = mysql.createConnection({
+            host: "host",
+            user: "user",
+            password: "password",
+            database: "database"
+        });
+
+        try {
+            // Connect to the database
+            // The promise is used to make sure that the connection is successful before continuing with the query
+            await new Promise((resolve, reject) => {
+                con.connect(function (err) {
+                    if (err) {
+                        reject(err);
+                    } else {
+                        console.log("Database connection successful");
+                        resolve();
+                    }
+                });
+            });
 
         // Initialize embed
         let queryResponseEmbed = new EmbedBuilder()

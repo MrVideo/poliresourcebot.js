@@ -30,10 +30,38 @@ module.exports = {
                     console.log("Database connection successful");
                     resolve();
                 }
-            )
-        })
+            });
+        });
 
-        // Respond to user
-        await interaction.reply({ embeds: [listEmbed] });
-        },
+        const query = "SELECT * R.Name, R.Link, A.FirstName, A.LastName, A.DiscordUsername FROM Resources R JOIN Author A ON R.AuthorID = A.ID";
+
+        const results = await new Promise((resolve, reject) => {
+            con.query(query, [], function(err, result) {
+                if(err)
+                    reject(err);
+                else
+                    resolve(result);
+            });
+        });
+
+        if (results.length === 0) {
+            await interaction.editReply("Che strano, non ci sono risorse...");
+        } else {
+            for(const row of results) {
+                if (row.FirstName === null || row.LastName === null) {
+                    listEmbed.addFields({
+                        name: `${row.Name} by ${row.DiscordUsername}`,
+                        value: row.Link
+                    });
+                } else {
+                    listEmbed.addFields({
+                        name: `${row.Name} by ${row.FirstName} ${row.LastName}`,
+                        value: row.Link
+                    });
+                }
+            }
+            // Respond to user
+            await interaction.reply({ embeds: [listEmbed] });
+        }
+    },
 };

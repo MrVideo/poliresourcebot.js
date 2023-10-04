@@ -39,10 +39,10 @@ module.exports = {
                 });
             });
 
-        // Initialize embed
-        let queryResponseEmbed = new EmbedBuilder()
-            .setTitle('Risultati di ricerca')
-            .setDescription('Ecco cosa ho trovato!');
+            // Initialize embed
+            let queryResponseEmbed = new EmbedBuilder()
+                .setTitle('Risultati di ricerca')
+                .setDescription('Ecco cosa ho trovato!');
 
         // Save search query
         const query = interaction.options.getString('query');

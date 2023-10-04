@@ -48,7 +48,7 @@ module.exports = {
             // Query the database for the resources matching this
             // A promise is used once again to make sure that the query executes before sending the result to the user
             const results = await new Promise((resolve, reject) => {
-                con.query("SELECT R.Name, R.Link, A.FirstName, A.LastName, A.DiscordUsername FROM Resources R, Authors A WHERE R.Name LIKE ? AND R.AuthorID = A.ID;", [query], function (err, result, fields) {
+                con.query("SELECT R.Name, R.Link, A.FirstName, A.LastName, A.DiscordUsername FROM Resources R, Authors A WHERE R.Name LIKE ? AND R.AuthorID = A.ID;", [query], function (err, result) {
                     if (err) {
                         reject(err);
                     } else {

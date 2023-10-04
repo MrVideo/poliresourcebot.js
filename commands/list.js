@@ -63,5 +63,8 @@ module.exports = {
             // Respond to user
             await interaction.editReply({ embeds: [listEmbed] });
         }
+
+        // Finally, close the connection
+        con.end();
     },
 };

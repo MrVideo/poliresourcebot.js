@@ -172,7 +172,7 @@ module.exports = {
                 });
             });
 
-        } catch {
+        } catch (err) {
             console.error('Error:', err);
             await interaction.followUp('Si è verificato un errore durante l\'inserimento.');
         } finally {

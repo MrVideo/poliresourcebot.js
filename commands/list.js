@@ -33,7 +33,7 @@ module.exports = {
             });
         });
 
-        const query = "SELECT * R.Name, R.Link, A.FirstName, A.LastName, A.DiscordUsername FROM Resources R JOIN Author A ON R.AuthorID = A.ID";
+        const query = "SELECT R.Name, R.Link, A.FirstName, A.LastName, A.DiscordUsername FROM Resources R JOIN Author A ON R.AuthorID = A.ID";
 
         const results = await new Promise((resolve, reject) => {
             con.query(query, [], function(err, result) {

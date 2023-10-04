@@ -22,12 +22,13 @@ module.exports = {
         // Embed initialization
         let listEmbed = new EmbedBuilder().setTitle('Lista delle risorse');
 
-        // Add items to embed
-        resources.forEach(item => {
-            listEmbed.addFields(
-                {
-                    name: item.name,
-                    value: item.url
+        await new Promise((resolve, reject) => {
+            con.connect(function (err) {
+                if (err) {
+                    reject(err);
+                } else {
+                    console.log("Database connection successful");
+                    resolve();
                 }
             )
         })

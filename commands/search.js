@@ -59,20 +59,28 @@ module.exports = {
                 });
             });
 
-        // Initialize regex to perform search
-        // The "i" flag makes the search case-insensitive.
-        const regex = new RegExp(query, "i");
+            // This variable makes sure not to send the embed if no results were found
+            let done = false;
 
-        // Execute search query
-        resources.forEach(item => {
-            if(regex.test(item.name)) {
-                queryResponseEmbed.addFields(
-                    {
-                        name: item.name,
-                        value: item.url
+            if (results.length === 0) {
+                // This is an error message that tells the user no item corresponds to their query
+                await interaction.editReply("Mi dispiace, ma non ho trovato nulla che corrisponda ai tuoi criteri di ricerca.");
+                done = true;
+            } else {
+                // If the query returned some items, build the embed with their name and link
+                for (const row of results) {
+                    if(row.FirstName === null || row.LastName === null) {
+                        queryResponseEmbed.addFields({
+                            name: `${row.Name} by ${row.DiscordUsername}`,
+                            value: row.Link
+                        });
+                    } else {
+                        queryResponseEmbed.addFields({
+                            name: `${row.Name} by ${row.FirstName} ${row.LastName}`,
+                            value: row.Link
+                        });
                     }
-                );
-                foundItems++;
+                }
             }
         });
 

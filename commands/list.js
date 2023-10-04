@@ -8,9 +8,6 @@ module.exports = {
         // Embed initialization
         let listEmbed = new EmbedBuilder().setTitle('Lista delle risorse');
 
-        // Load resources.json
-        const resources = require('../src/resources.json');
-
         // Add items to embed
         resources.forEach(item => {
             listEmbed.addFields(

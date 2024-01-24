@@ -1,5 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Refresh commands" type="NodeJSConfigurationType" path-to-js-file="deploy-commands.js" working-dir="$PROJECT_DIR$">
-    <method v="2" />
-  </configuration>
-</component>

@@ -18,21 +18,17 @@ module.exports = {
                     value: '`/help`'
                 },
                 {
-                    name: 'Lista risorse',
-                    value: '`/list`'
-                },
-                {
                     name: 'Ricerca risorse',
                     value: '`/search <query>`'
+                },
+                {
+                    name: 'Aggiungi risorsa',
+                    value: '`/add <nome risorsa> <URL alla risorsa>`'
                 },
                 {
                     name: 'Informazioni sul bot',
                     value: '`/about`'
                 },
-                {
-                    name: 'Cerca i link delle aule virtuali',
-                    value: '`/webex [prof/subj] <query>`'
-                }
             ]
         }
 

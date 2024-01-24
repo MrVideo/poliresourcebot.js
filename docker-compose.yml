@@ -5,4 +5,4 @@ services:
     build: .
     volumes:
       - ./config.json:/app/config.json:ro
-      - ./sqlitedb:/app/sqlitedb:rw
+      - ./db:/app/db:rw

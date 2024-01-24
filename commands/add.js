@@ -8,7 +8,7 @@ module.exports = {
         .setName('add')
         .setDescription('Aggiungi una risorsa al database del bot')
         .addStringOption(option =>
-            option.setName('resname')
+            option.setName('name')
                 .setDescription('Il nome della risorsa')
                 .setRequired(true)
         )
